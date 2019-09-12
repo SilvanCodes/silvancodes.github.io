@@ -1,0 +1,119 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.3/rxjs.umd.min.js"></script>
+
+<ul id="observables">
+</ul>
+
+<style>
+    ul {
+        list-style-type: none;
+    }
+    li {
+        position: relative;
+        display: inline-block;
+        top: -17px;
+        border-radius: 50% 50%;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+    }
+
+    #observables {
+        list-style-type: initial;
+        margin-top: 100px;
+    }
+
+    #observables > * + * {
+        padding-top: 15px;
+    }
+</style>
+
+<script>
+DISTANCE_SCALE_FACTOR = 50;
+NODE_WIDTH = 20;
+
+function computePosition(time, ul) {
+    const now = Date.now()
+    const timeDelta = now - time;
+    const offset = (ul.childNodes.length - 1) * NODE_WIDTH - NODE_WIDTH / 2;
+    const timeDistance = Math.round(timeDelta / DISTANCE_SCALE_FACTOR);
+    return timeDistance - offset;
+}
+
+function show(title = '', color = 'red') {
+    const p = document.createElement('p');
+    const text = document.createTextNode(title);
+    p.appendChild(text);
+
+    const ul = document.createElement('ul');
+    const hr = document.createElement('hr');
+    ul.appendChild(hr);
+
+    observables.appendChild(p);
+    observables.appendChild(ul);
+
+    let time = Date.now();
+
+    return {
+        next: function(v) {        
+            const li = document.createElement('li');
+            const text = document.createTextNode(typeof v === 'object' ? 'e' : v);
+            li.style.left = computePosition(time, ul) + 'px';
+            li.style.backgroundColor = color;
+            li.appendChild(text);
+            ul.appendChild(li);
+        },
+        complete: function(v) {
+            const li = document.createElement('li');
+            const text = document.createTextNode('C');
+            li.style.left = (computePosition(time, ul) + NODE_WIDTH * 3) + 'px';
+            li.style.backgroundColor = 'white';
+            li.appendChild(text);
+            ul.appendChild(li);
+        },
+        error: function(v) {
+            const li = document.createElement('li');
+            const text = document.createTextNode('X');
+            li.style.left = (computePosition(time, ul) + NODE_WIDTH * 3) + 'px';
+            li.style.backgroundColor = 'white';
+            li.appendChild(text);
+            ul.appendChild(li);
+        }
+    }
+}
+
+with(rxjs) {
+with(operators) {
+/*   === ATTENTION ===
+ *   This setup hides the following observable constructors,
+ *   as they are shadowed by the same name operators:
+ *
+ *   combineLatest 
+ *   concat 
+ *   merge 
+ *   onErrorResumeNext 
+ *   partition 
+ *   race 
+ *   zip
+ *
+ * They can still be reached by referring to them as rxjs.<constructor>.
+ */
+
+    const source = interval(500);
+    const time = interval(1000);
+
+    source.pipe(
+        window(time),
+        concatMap(s => s.pipe(
+            delay(1000 * Math.random())
+        )),
+    ).subscribe(show('dropping values'));
+
+    source.pipe(
+        window(time),
+        tap(v => v.complete()),
+        mergeAll(),
+    ).subscribe(show('no values'));
+
+} // dont leave this block for convenience ;)
+}
+</script>
