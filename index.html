@@ -1,89 +1,122 @@
 <!DOCTYPE html>
 
-<style>
-	body {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-		line-height: 1.6;
-		color: #222;
-		max-width: 40rem;
-		padding: 2rem;
-		margin: auto;
-		background: #fafafa;
-	}
-	img {
-		max-width: 100%;
-	}
-	a {
-		color: #2ECC40;
-	}
-	h1, h2, strong {
-		color: #111;
-	}
-</style>
-
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Read about Silvan">
-		<meta name="keywords" content="Silvan, Developer, Programmer, Computer Scientist">
-		<meta name="author" content="Silvan Codes">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>SilvanCodes</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Read about Silvan" />
+    <meta
+      name="keywords"
+      content="Silvan, Developer, Programmer, Computer Scientist"
+    />
+    <meta name="author" content="Silvan Codes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SilvanCodes</title>
+    <link rel="stylesheet" href="https://elc.silvan.codes/elc.css" />
+  </head>
 
-	<body>
-		<h1>SilvanCodes</h1>
-		<p>
-			Hi, my name is Silvan. I'm a computer scientist and a programmer.
-			<br>
-			I believe software should be simple and using it should be easy.
-		</p>
-		<hr>
-		<p>
-			Humans are as dear to me as programming is.
-			They're a beautiful, disturbing and intriguing class of complex problems.
-			<br>
-			I'd like to see humanity prosper instead of devour itself.
-		</p>
-		<hr>
-		<h2>Technologies I prefer working with:</h2>
-		<ul>
-			<li>Rust</li>
-			<li>TypeScript</li>
-			<li>GraphQL</li>
-			<li>Docker</li>
-		</ul>
-		<hr>
-		<h2>Technologies I've used in the past:</h2>
-		<ul>
-			<li>Angular2+</li>
-			<li>Vue.js</li>
-			<li>React</li>
-			<li>Svelte</li>
-			<li>Node.js</li>
-			<li>MongoDB</li>
-			<li>gRPC</li>
-			<li>Python</li>
-			<li>Prolog</li>
-			<li>Ruby (on Rails)</li>
-			<li>Scala/Akka</li>
-			<li>Kubernetes</li>
-		</ul>
-		<hr>
-		<p>
-			I don't like chairs, I sit on the floor.
-		</p>
-		<hr>
-		<p>
-			I've gathered around five years of professional experience and earned a bachelors degree in computer science.
-			<br>
-			<a href="SET-NEAT_Thesis.pdf" download>My Thesis</a>
-			<br>
-			<a href="https://github.com/SilvanCodes" target="_blank">My Github</a>
-			<br>
-			<a href="https://blog.silvan.codes" target="_blank">My Blog</a>
-			<br>
-			Email me at: <a href="mailto:SilvanCodes@gmail.com">SilvanCodes@gmail.com</a>
-		</p>
-	</body>
+  <style>
+    :root {
+      --ratio: 1.98;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif;
+      line-height: var(--s1);
+      color: #222;
+      background: #fafafa;
+    }
+    img {
+      max-width: 100%;
+    }
+    a {
+      color: #2ecc40;
+    }
+    h1,
+    h2,
+    strong {
+      color: #111;
+    }
+
+    ul {
+      padding-left: var(--s0);
+    }
+
+    section ~ section::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      margin-bottom: var(--s0);
+      clear: both;
+      background-color: gray;
+    }
+  </style>
+
+  <body class="elc-cover elc-center" style="--cover-padding: var(--s1)">
+    <h1>SilvanCodes</h1>
+
+    <main class="elc-stack">
+      <section>
+        Hi, my name is Silvan. I'm a computer scientist and a programmer.
+        <br />
+        I believe software should be simple and using it should be easy.
+      </section>
+
+      <section>
+        Humans are as dear to me as programming is. They're a beautiful,
+        disturbing and intriguing class of complex problems.
+        <br />
+        I'd like to see humanity prosper instead of devour itself.
+      </section>
+
+      <section class="elc-stack">
+        <h2>Technologies I prefer working with:</h2>
+        <ul>
+          <li>Rust</li>
+          <li>TypeScript</li>
+          <li>GraphQL</li>
+          <li>Docker</li>
+        </ul>
+      </section>
+
+      <section class="elc-stack">
+        <h2>Technologies I've used in the past:</h2>
+        <ul>
+          <li>Angular2+</li>
+          <li>Vue.js</li>
+          <li>React</li>
+          <li>Svelte</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>gRPC</li>
+          <li>Python</li>
+          <li>Prolog</li>
+          <li>Ruby (on Rails)</li>
+          <li>Scala/Akka</li>
+          <li>Kubernetes</li>
+        </ul>
+      </section>
+
+      <section>
+        <p>I don't like chairs, I sit on the floor.</p>
+      </section>
+
+      <section>
+        <p>
+          I've gathered around five years of professional experience and earned
+          a bachelors degree in computer science.
+          <br />
+          <a href="SET-NEAT_Thesis.pdf" download>My Thesis</a>
+          <br />
+          <a href="https://github.com/SilvanCodes" target="_blank">My Github</a>
+          <br />
+          <a href="https://blog.silvan.codes" target="_blank">My Blog</a>
+          <br />
+          Email me at:
+          <a href="mailto:SilvanCodes@gmail.com">SilvanCodes@gmail.com</a>
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
