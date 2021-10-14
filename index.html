@@ -19,10 +19,35 @@
       --ratio: 1.98;
     }
 
+    @font-face {
+      font-family: "Paradroid";
+      src: url("assets/fonts/ParadroidMono-Light.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Solid";
+      src: url("assets/fonts/Solid-Mono.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Solid", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-        Arial, sans-serif;
+      font-family: "Paradroid", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
       line-height: var(--s1);
+      font-weight: 600;
       color: #222;
       background: #fafafa;
     }
