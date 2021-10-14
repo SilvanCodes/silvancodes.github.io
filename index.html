@@ -63,18 +63,15 @@
       color: #111;
     }
 
-    ul {
-      padding-left: var(--s0);
+    section:hover {
+      background: #efefef;
+    }
+    li:hover {
+      background: #dadada;
     }
 
-    section ~ section::before {
-      content: "";
-      width: 100%;
-      height: 1px;
-      display: block;
-      margin-bottom: var(--s0);
-      clear: both;
-      background-color: gray;
+    .box-small {
+      --box-padding: var(--s-2);
     }
   </style>
 
@@ -83,49 +80,169 @@
 
     <main class="elc-stack">
       <section>
-        Hi, my name is Silvan. I'm a computer scientist and a programmer.
-        <br />
-        I believe software should be simple and using it should be easy.
+        <p>
+          Hi, my name is Silvan.
+          <br />
+          I'm a computer scientist and software engineer.
+        </p>
       </section>
+
+      <hr />
 
       <section>
-        Humans are as dear to me as programming is. They're a beautiful,
-        disturbing and intriguing class of complex problems.
-        <br />
-        I'd like to see humanity prosper instead of devour itself.
+        <p>I believe software should be simple and using it should be easy.</p>
       </section>
 
-      <section class="elc-stack">
-        <h2>Technologies I prefer working with:</h2>
-        <ul>
-          <li>Rust</li>
-          <li>TypeScript</li>
-          <li>GraphQL</li>
-          <li>Docker</li>
-        </ul>
+      <hr />
+
+      <section>
+        <p>
+          Humans are a beautiful, disturbing and intriguing class of complex
+          problems.
+          <br />
+          I'd like to see humanity prosper instead of devour itself.
+        </p>
       </section>
 
+      <hr />
+
       <section class="elc-stack">
-        <h2>Technologies I've used in the past:</h2>
-        <ul>
-          <li>Angular2+</li>
-          <li>Vue.js</li>
-          <li>React</li>
-          <li>Svelte</li>
-          <li>Node.js</li>
-          <li>MongoDB</li>
-          <li>gRPC</li>
-          <li>Python</li>
-          <li>Prolog</li>
-          <li>Ruby (on Rails)</li>
-          <li>Scala/Akka</li>
-          <li>Kubernetes</li>
-        </ul>
+        <p>
+          I strive to use technologies that are the right tool for the job.
+          <br />
+          To accomplish that I am continually learning about new and old.
+        </p>
       </section>
+
+      <hr />
+
+      <section class="elc-stack">
+        <h2 class="elc-center">Technologie Bucket</h2>
+        <div class="elc-cluster">
+          <ul style="list-style-type: none">
+            <a
+              href="https://angular.io"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Angular</li>
+            </a>
+            <a
+              href="https://www.docker.com"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Docker</li>
+            </a>
+            <a
+              href="https://graphql.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">GraphQL</li>
+            </a>
+            <a
+              href="https://grpc.io"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">gRPC</li>
+            </a>
+            <a
+              href="https://kubernetes.io"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Kubernetes</li>
+            </a>
+            <a
+              href="https://www.mongodb.com"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">MongoDB</li>
+            </a>
+            <a
+              href="https://nodejs.org/en/"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Node.js</li>
+            </a>
+            <a
+              href="https://www.swi-prolog.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Prolog</li>
+            </a>
+            <a
+              href="https://www.python.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Python</li>
+            </a>
+            <a
+              href="https://reactjs.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">React</li>
+            </a>
+            <a
+              href="https://rubyonrails.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Ruby (on Rails)</li>
+            </a>
+            <a
+              href="https://www.rust-lang.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Rust</li>
+            </a>
+            <a
+              href="https://akka.io"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Scala/Akka</li>
+            </a>
+            <a
+              href="https://svelte.dev"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Svelte</li>
+            </a>
+            <a
+              href="https://www.typescriptlang.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">TypeScript</li>
+            </a>
+            <a
+              href="https://vuejs.org"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <li class="elc-box box-small">Vue.js</li>
+            </a>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
 
       <section>
         <p>I don't like chairs, I sit on the floor.</p>
       </section>
+
+      <hr />
 
       <section>
         <p>
