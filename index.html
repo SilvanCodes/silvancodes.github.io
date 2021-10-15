@@ -75,12 +75,35 @@
     section:hover {
       background: #efefef;
     }
-    li:hover {
-      background: #dadada;
+
+    .bucket {
+      list-style-type: none;
+    }
+
+    .bucket > a {
+      text-decoration: none;
+      color: inherit;
     }
 
     .box-small {
       --box-padding: var(--s-2);
+    }
+
+    .box-small:hover {
+      background: #dadada;
+      animation: duck 0.3s forwards;
+    }
+
+    @keyframes duck {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.95);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
   </style>
 
@@ -131,117 +154,53 @@
         <section class="elc-stack">
           <h2 class="elc-center">Technologie Bucket</h2>
           <div class="elc-cluster">
-            <ul style="list-style-type: none">
-              <a
-                href="https://angular.io"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+            <ul class="bucket">
+              <a href="https://angular.io" target="_blank">
                 <li class="elc-box box-small">Angular</li>
               </a>
-              <a
-                href="https://www.docker.com"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://www.docker.com" target="_blank">
                 <li class="elc-box box-small">Docker</li>
               </a>
-              <a
-                href="https://graphql.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://graphql.org" target="_blank">
                 <li class="elc-box box-small">GraphQL</li>
               </a>
-              <a
-                href="https://grpc.io"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://grpc.io" target="_blank">
                 <li class="elc-box box-small">gRPC</li>
               </a>
-              <a
-                href="https://kubernetes.io"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://kubernetes.io" target="_blank">
                 <li class="elc-box box-small">Kubernetes</li>
               </a>
-              <a
-                href="https://www.mongodb.com"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://www.mongodb.com" target="_blank">
                 <li class="elc-box box-small">MongoDB</li>
               </a>
-              <a
-                href="https://nodejs.org/en/"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://nodejs.org/en/" target="_blank">
                 <li class="elc-box box-small">Node.js</li>
               </a>
-              <a
-                href="https://www.swi-prolog.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://www.swi-prolog.org" target="_blank">
                 <li class="elc-box box-small">Prolog</li>
               </a>
-              <a
-                href="https://www.python.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://www.python.org" target="_blank">
                 <li class="elc-box box-small">Python</li>
               </a>
-              <a
-                href="https://reactjs.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://reactjs.org" target="_blank">
                 <li class="elc-box box-small">React</li>
               </a>
-              <a
-                href="https://rubyonrails.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://rubyonrails.org" target="_blank">
                 <li class="elc-box box-small">Ruby (on Rails)</li>
               </a>
-              <a
-                href="https://www.rust-lang.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://www.rust-lang.org" target="_blank">
                 <li class="elc-box box-small">Rust</li>
               </a>
-              <a
-                href="https://akka.io"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://akka.io" target="_blank">
                 <li class="elc-box box-small">Scala/Akka</li>
               </a>
-              <a
-                href="https://svelte.dev"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://svelte.dev" target="_blank">
                 <li class="elc-box box-small">Svelte</li>
               </a>
-              <a
-                href="https://www.typescriptlang.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://www.typescriptlang.org" target="_blank">
                 <li class="elc-box box-small">TypeScript</li>
               </a>
-              <a
-                href="https://vuejs.org"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              >
+              <a href="https://vuejs.org" target="_blank">
                 <li class="elc-box box-small">Vue.js</li>
               </a>
             </ul>
