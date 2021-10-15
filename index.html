@@ -11,8 +11,18 @@
     />
     <meta name="author" content="Silvan Codes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon START -->
+
+    <link rel="preload" href="https://elc.silvan.codes/elc.css" as="style" />
     <link rel="stylesheet" href="https://elc.silvan.codes/elc.css" />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/ParadroidMono-Light.ttf"
+      as="font"
+    />
+    <link rel="preload" href="/assets/fonts/Solid-Mono.ttf" as="font" />
+
+    <!-- favicon START -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -33,6 +43,7 @@
       src: url("assets/fonts/ParadroidMono-Light.ttf");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
     @font-face {
@@ -40,6 +51,7 @@
       src: url("assets/fonts/Solid-Mono.ttf");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
     h1,
