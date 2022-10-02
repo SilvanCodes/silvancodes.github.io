@@ -15,6 +15,9 @@
     <link rel="preload" href="https://elc.silvan.codes/elc.css" as="style" />
     <link rel="stylesheet" href="https://elc.silvan.codes/elc.css" />
 
+    <link rel="preload" href="assets/styles/global.css" as="style" />
+    <link rel="stylesheet" href="assets/styles/global.css" />
+
     <link
       rel="preload"
       href="/assets/fonts/ParadroidMono-Light.ttf"
@@ -38,92 +41,6 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- favicon END -->
   </head>
-
-  <style>
-    :root {
-      --ratio: 1.98;
-    }
-
-    @font-face {
-      font-family: "Paradroid";
-      src: url("assets/fonts/ParadroidMono-Light.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Solid";
-      src: url("assets/fonts/Solid-Mono.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Solid", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Helvetica, Arial, sans-serif;
-    }
-
-    body {
-      font-family: "Paradroid", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Helvetica, Arial, sans-serif;
-      line-height: var(--s1);
-      font-weight: 600;
-      color: #222;
-      background: #fafafa;
-    }
-    img {
-      max-width: 100%;
-    }
-    a {
-      color: #107010;
-    }
-    h1,
-    h2,
-    strong {
-      color: #111;
-    }
-
-    section:hover {
-      background: #efefef;
-    }
-
-    .bucket {
-      list-style-type: none;
-    }
-
-    .bucket a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .box-small {
-      --box-padding: var(--s-2);
-    }
-
-    .box-small:hover {
-      background: #dadada;
-      animation: duck 0.3s forwards;
-    }
-
-    @keyframes duck {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(0.95);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
 
   <body>
     <main class="elc-cover elc-center" style="--cover-padding: var(--s1)">
