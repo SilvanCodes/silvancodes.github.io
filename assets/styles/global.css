@@ -45,6 +45,10 @@ a {
     color: #107010;
 }
 
+section {
+    padding: var(--s-1);
+}
+
 h1,
 h2,
 strong {
